@@ -44,7 +44,7 @@ class Home extends Component {
     loadMoreItems = () => {
         let endpoint = '';
         this.setState({loading:true});
-        if(this.state.searchTerm == '') {
+        if(this.state.searchTerm === '') {
             endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currentPage + 1}`;
         } else {
             endpoint = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US&query=${this.state.searchTerm}&page=${this.state.currentPage+1}`;
@@ -91,7 +91,7 @@ class Home extends Component {
                         key={i}
                         clickable={true}
                         image={elm.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}/${elm.poster_path}` : ''}
-                        movieid={elm.id}
+                        movieId={elm.id}
                         movieName={elm.original_title}
                         />
                     })

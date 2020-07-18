@@ -4,6 +4,11 @@ import './HeroImage.css';
 const HeroImage = (props) => {
 
     const customStyle = {
+        background: `linear-gradient(
+            to bottom,
+            rgba(0,0,0,0),
+            rgba(0,0,0, 0.65)
+          ),url('${props.image}')`
             // background: `
             //     linear-gradient(to bottom, rgba(0,0,0,0)
             //     39%, rgba(0,0,0,0)
@@ -11,10 +16,7 @@ const HeroImage = (props) => {
             //     100%)
             //     url(${props.image}), #1c1c1c
             // `
-            background: `url('${props.image}')`
     }
-
-    console.log(customStyle);
 
     return (
     <div className="rmdb-heroimage"
