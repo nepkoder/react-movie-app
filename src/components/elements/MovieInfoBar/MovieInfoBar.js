@@ -1,5 +1,6 @@
 import React from 'react'
 import './MovieInfoBar.css';
+import PropTypes from 'prop-types';
 import {calcTime, convertMoney} from '../../../helpers';
 
 const MovieInfoBar = (props) => {
@@ -26,5 +27,13 @@ const MovieInfoBar = (props) => {
         </div>
     )
 }
+
+MovieInfoBar.propTypes = {
+    time: PropTypes.number,
+    revenue : PropTypes.number,
+    budget: PropTypes.number
+}
+
+
 
 export default MovieInfoBar;

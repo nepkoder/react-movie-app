@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {API_URL, API_KEY, IMAGE_BASE_URL, POSTER_SIZE, BACKDROP_SIZE} from '../../config';
+import {API_URL, API_KEY} from '../../config';
 import Navigation from '../elements/Navigation/Navigation';
 import MovieInfo from '../elements/MovieInfo/MovieInfo';
 import MovieInfoBar from '../elements/MovieInfoBar/MovieInfoBar';
@@ -35,7 +35,7 @@ class Movie extends Component {
             } else {
                 this.setState({movie:result}, () => {
                     // then fetch actors in the setstates callback functions
-                    console.log('object');
+                    console.log('working..');
                     const endpoint = `${API_URL}movie/${this.props.match.params.movieId}/credits?api_key=${API_KEY}`;
                     fetch(endpoint).then(result => result.json()).then(result => {
                         const directors = result.crew.filter( member => member.job === 'Director');

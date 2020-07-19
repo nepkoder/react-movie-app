@@ -1,6 +1,7 @@
 import React from 'react'
 import './Actor.css';
 import {IMAGE_BASE_URL} from '../../../config';
+import PropTypes from 'prop-types';
 
 const Actor = props => {
 
@@ -16,5 +17,10 @@ const Actor = props => {
     )
 
 }
+
+Actor.propTypes = {
+    actor: PropTypes.object
+}
+
 
 export default Actor;
